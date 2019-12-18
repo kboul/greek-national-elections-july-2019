@@ -1,7 +1,6 @@
 import React from 'react';
+import Map from './Map';
 
-function App() {
-    return <div>Hello World</div>;
-}
+const App = () => <Map />;
 
 export default App;
