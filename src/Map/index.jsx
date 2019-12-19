@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, { Source, Layer } from 'react-map-gl';
-import json from './greeceprefectures.json';
 import { dataLayer } from './constants';
+import Tooltip from './Tooltip';
+import usePrefectureGeoJson from './usePrefectureGeoJson';
+import { Context } from '../context';
 
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
 
@@ -14,21 +16,39 @@ const Map = () => {
         longitude: 21.8243122,
         zoom: 6
     });
-
-    const [data, setData] = useState(null);
-    useEffect(() => setData(json), []);
+    const geojsonData = usePrefectureGeoJson();
+    const { setHoveredFeature, setX, setY, setPrefectureId } = useContext(
+        Context
+    );
 
     const onViewportChange = newViewport => setViewport(newViewport);
+
+    const onHover = event => {
+        const {
+            features,
+            srcEvent: { offsetX, offsetY }
+        } = event;
+        const hoverFeature =
+            features && features.find(f => f.layer.id === 'data');
+
+        setHoveredFeature(hoverFeature);
+        if (hoverFeature) setPrefectureId(hoverFeature.properties.EP_ID);
+
+        setX(offsetX);
+        setY(offsetY);
+    };
 
     return (
         <ReactMapGL
             {...viewport}
             mapStyle="mapbox://styles/mapbox/streets-v11"
             mapboxApiAccessToken={MAPBOX_TOKEN}
-            onViewportChange={onViewportChange}>
-            <Source type="geojson" data={data}>
+            onViewportChange={onViewportChange}
+            onHover={onHover}>
+            <Source type="geojson" data={geojsonData}>
                 <Layer {...dataLayer} />
             </Source>
+            <Tooltip />
         </ReactMapGL>
     );
 };
