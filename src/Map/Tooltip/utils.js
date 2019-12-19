@@ -20,23 +20,23 @@ export const partyName = partyId => {
         case 2:
             return 'ND';
         case 4:
-            return 'Syriza';
+            return 'SYRIZA';
         case 106:
-            return 'KINAL';
+            return 'KIN.AL.';
         case 108:
-            return 'Elliniki Ly...';
+            return 'ELLINIKI LYSI';
         case 41:
-            return 'Xrysi Augi';
+            return 'CHRYSI AVGI';
         case 3:
             return 'KKE';
         case 122:
-            return 'Mera25';
+            return 'MERA25';
         case 15:
-            return 'En. Kentrwwn';
+            return 'EN. KENTROON...';
         case 123:
-            return 'Pleusi Ele...';
+            return 'PLEFSI EL...';
         case 60:
-            return 'Dimiourgia ...';
+            return 'DIMIOURGIA...';
         default:
             return '';
     }

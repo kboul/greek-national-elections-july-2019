@@ -14,7 +14,7 @@ const PartyLogo = ({ partyId }) => {
 };
 
 PartyLogo.propTypes = {
-    partyId: PropTypes.string.isRequired
+    partyId: PropTypes.number.isRequired
 };
 
 export default PartyLogo;
