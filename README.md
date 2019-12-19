@@ -1,13 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Greek Elections App
 
-## Available Scripts
+A react app to visualize the 2019 National Elections' results using mapbox similar to this [page](https://ekloges.ypes.gr/current/v/home/).
 
-In the project directory, you can run:
+## Run the project
 
-### `npm start`
+clone the project
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+select master branch
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Navigate to the root folder:
+
+```
+npm install
+```
+
+```
+npm start
+```
+
+browser listens to [http://localhost:3000](http://localhost:3000) as default port
+
+Elections' data & images were taken from [Hellenic Republic's Ministry of Interior](https://ekloges.ypes.gr/).
