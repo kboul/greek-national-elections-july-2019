@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import { Context } from '../../context';
-import PartyLogo from './PartyLogo';
+import PartyLogo from '../PartyLogo';
 import useEpsFetcher from './hooks';
-import { partyName, roundDecimals } from './utils';
+import { partyName } from './utils';
+import { roundDecimals } from '../utils';
 import styles from './index.module.sass';
 
 const Tooltip = () => {

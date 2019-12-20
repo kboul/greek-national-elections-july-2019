@@ -5,6 +5,7 @@ import { dataLayer } from './constants';
 import { Context } from '../context';
 import Tooltip from './Tooltip';
 import usePrefectureGeoJSON from './hooks';
+import PartyCards from './PartyCards';
 
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
 
@@ -15,6 +16,11 @@ const Map = () => {
         latitude: 39.0742073,
         longitude: 21.8243122,
         zoom: 6
+    });
+    const [settings] = useState({
+        dragPan: false,
+        scrollZoom: false,
+        doubleClickZoom: false
     });
     const geojsonData = usePrefectureGeoJSON();
     const { setHoveredFeature, setX, setY, setPrefectureId } = useContext(
@@ -41,6 +47,7 @@ const Map = () => {
     return (
         <ReactMapGL
             {...viewport}
+            {...settings}
             mapStyle="mapbox://styles/mapbox/streets-v11"
             mapboxApiAccessToken={MAPBOX_TOKEN}
             onViewportChange={onViewportChange}
@@ -49,6 +56,7 @@ const Map = () => {
                 <Layer {...dataLayer} />
             </Source>
             <Tooltip />
+            <PartyCards />
         </ReactMapGL>
     );
 };
