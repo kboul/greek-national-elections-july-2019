@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import httpService from '../../httpService';
 
 /**
- *
+ * election results per prefecture
  * @param {string} id
  * @returns {Array}
  */
 
-const useResultFetcher = prefectureId => {
+const useEpsFetcher = prefectureId => {
     const [results, setResults] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -17,7 +17,7 @@ const useResultFetcher = prefectureId => {
         setError(false);
 
         const fetchData = async () => {
-            if (!prefectureId) return;
+            if (!prefectureId || prefectureId === -1) return;
 
             try {
                 const response = await httpService.get(
@@ -35,4 +35,4 @@ const useResultFetcher = prefectureId => {
     return [results, loading, error];
 };
 
-export default useResultFetcher;
+export default useEpsFetcher;

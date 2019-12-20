@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { Context } from '../../context';
 import PartyLogo from './PartyLogo';
-import useResultFetcher from './useResultsFetcher';
-import { partyName } from './utils';
+import useEpsFetcher from './hooks';
+import { partyName, roundDecimals } from './utils';
 import styles from './index.module.sass';
 
 const Tooltip = () => {
     const { hoveredFeature, x, y, prefectureId } = useContext(Context);
-    const [electionResults, loading] = useResultFetcher(prefectureId);
+    const [electionResults, loading] = useEpsFetcher(prefectureId);
 
     const table = (
         <table>
@@ -25,8 +25,7 @@ const Tooltip = () => {
                                             {partyName(PARTY_ID)}
                                         </td>
                                         <td className={styles.tdRightPadding}>
-                                            {`${Math.round(Perc * 100) /
-                                                100} %`}
+                                            {`${roundDecimals(Perc)} %`}
                                         </td>
                                         <td>{Edres > 0 ? Edres : ''}</td>
                                     </tr>
@@ -39,7 +38,7 @@ const Tooltip = () => {
         </table>
     );
 
-    return hoveredFeature ? (
+    return hoveredFeature && hoveredFeature.properties.EP_ID !== -1 ? (
         <div className={styles.tooltip} style={{ left: x, top: y }}>
             <h4>{hoveredFeature.properties.name}</h4>
             {loading ? 'Loading...' : table}

@@ -2,9 +2,9 @@ import React, { useState, useContext } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, { Source, Layer } from 'react-map-gl';
 import { dataLayer } from './constants';
-import Tooltip from './Tooltip';
-import usePrefectureGeoJson from './usePrefectureGeoJson';
 import { Context } from '../context';
+import Tooltip from './Tooltip';
+import usePrefectureGeoJSON from './hooks';
 
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
 
@@ -16,7 +16,7 @@ const Map = () => {
         longitude: 21.8243122,
         zoom: 6
     });
-    const geojsonData = usePrefectureGeoJson();
+    const geojsonData = usePrefectureGeoJSON();
     const { setHoveredFeature, setX, setY, setPrefectureId } = useContext(
         Context
     );
