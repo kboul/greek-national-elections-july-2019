@@ -1,5 +1,6 @@
 import React from 'react';
 import PartyLogo from '../PartyLogo';
+import Spinner from '../Spinner';
 import useEpik1Fetcher from './hooks';
 import { roundDecimals } from '../utils';
 import { borderColor } from './utils';
@@ -45,10 +46,14 @@ const PartyCards = () => {
         </>
     );
 
-    return (
-        <div className={styles.cardContainer}>
-            {loading ? 'Loading...' : cards}
+    const spinner = (
+        <div className={styles.spinner}>
+            <Spinner />
         </div>
+    );
+
+    return (
+        <div className={styles.cardContainer}>{loading ? spinner : cards}</div>
     );
 };
 
