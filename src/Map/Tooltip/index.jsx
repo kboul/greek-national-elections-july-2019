@@ -3,8 +3,8 @@ import { Context } from '../../context';
 import PartyLogo from '../PartyLogo';
 import Spinner from '../Spinner';
 import useEpsFetcher from './hooks';
-import { partyName, tooltipY } from './utils';
-import { roundDecimals } from '../utils';
+import { tooltipY } from './utils';
+import { partyName, roundDecimals } from '../../utils';
 import styles from './index.module.sass';
 
 const Tooltip = () => {

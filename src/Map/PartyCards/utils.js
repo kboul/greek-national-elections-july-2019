@@ -1,10 +1,10 @@
 /**
  *
- * @param {number} partyId
+ * @param {number or null} partyId
  * @returns {string} - border style
  */
 
-export const borderColor = partyId => {
+export const borderColor = (partyId = null) => {
     let border = '2px solid ';
     switch (partyId) {
         case 2:

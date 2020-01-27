@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PartyLogo from '../PartyLogo';
 import Spinner from '../Spinner';
 import useEpik1Fetcher from './hooks';
-import { roundDecimals } from '../utils';
 import { borderColor } from './utils';
+import { roundDecimals } from '../../utils';
 import styles from './index.module.sass';
 
 const PartyCards = () => {
@@ -16,33 +17,39 @@ const PartyCards = () => {
                     ({ Perc, PARTY_ID, Edres, EdresEpik }, index) => {
                         if (index < 6)
                             return (
-                                <div
-                                    className={styles.card}
+                                <Link
                                     key={PARTY_ID}
-                                    style={{
-                                        border: borderColor(PARTY_ID)
-                                    }}>
-                                    <div className={styles.logo}>
-                                        <PartyLogo
-                                            partyId={PARTY_ID}
-                                            forCards
-                                        />
+                                    className={styles.link}
+                                    to={`parties/${PARTY_ID}`}>
+                                    <div
+                                        className={styles.card}
+                                        style={{
+                                            border: borderColor(PARTY_ID)
+                                        }}>
+                                        <div className={styles.logo}>
+                                            <PartyLogo
+                                                partyId={PARTY_ID}
+                                                forCards
+                                            />
+                                        </div>
+                                        <div className={styles.percentage}>
+                                            {roundDecimals(Perc)}
+                                        </div>
+                                        <div className={styles.seats}>
+                                            {Edres + EdresEpik}
+                                        </div>
                                     </div>
-                                    <div className={styles.percentage}>
-                                        {roundDecimals(Perc)}
-                                    </div>
-                                    <div className={styles.seats}>
-                                        {Edres + EdresEpik}
-                                    </div>
-                                </div>
+                                </Link>
                             );
                         return null;
                     }
                 )}
-            <div className={styles.card} style={{ border: borderColor(null) }}>
-                <div className={styles.other}>Other</div>
-                <div className={styles.percentage}>8.08</div>
-            </div>
+            <Link className={styles.link} to="/">
+                <div className={styles.card} style={{ border: borderColor() }}>
+                    <div className={styles.other}>Other</div>
+                    <div className={styles.percentage}>8.08</div>
+                </div>
+            </Link>
         </>
     );
 

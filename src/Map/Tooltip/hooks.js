@@ -3,7 +3,7 @@ import httpService from '../../httpService';
 
 /**
  * election results per prefecture
- * @param {string} id
+ * @param {string} prefectureId
  * @returns {Array}
  */
 

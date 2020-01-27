@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, { Source, Layer } from 'react-map-gl';
+import Tooltip from './Tooltip';
+import PartyCards from './PartyCards';
 import { dataLayer } from './constants';
 import { Context } from '../context';
-import Tooltip from './Tooltip';
 import usePrefectureGeoJSON from './hooks';
-import PartyCards from './PartyCards';
 
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
 
