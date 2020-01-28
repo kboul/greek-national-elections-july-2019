@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import PartyLogo from '../Map/PartyLogo';
+import PartyLogo from '../PartyLogo';
 import Spinner from '../Map/Spinner';
 import { usePartyResultFetcher } from './hooks';
 import { roundDecimals } from '../utils';
@@ -33,7 +33,7 @@ const ResultTable = () => {
     return (
         <div className={styles.container}>
             <div className={styles.partyName}>
-                <PartyLogo partyId={parseInt(id, 10)} forCards />
+                <PartyLogo partyId={parseInt(id, 10)} useFor="tables" />
                 {partyName(parseInt(id, 10))}
             </div>
             <table className={styles.results}>

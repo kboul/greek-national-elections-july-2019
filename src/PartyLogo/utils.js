@@ -48,27 +48,34 @@ export const partyLogo = partyId => {
  * @returns {number} - party logo width
  */
 
-export const partyLogoWidth = (partyId, forCards) => {
+export const partyLogoWidth = (partyId, useFor) => {
+    const forCards = useFor === 'cards';
+    const forTables = useFor === 'tables';
     switch (partyId) {
         case 2:
             if (forCards) return 68;
+            if (forTables) return 64;
             return 32;
         case 4:
             if (forCards) return 68;
+            if (forTables) return 64;
             return 24;
         case 106:
-            if (forCards) return 56;
+            if (forCards || forTables) return 56;
             return 20;
         case 108:
             if (forCards) return 68;
+            if (forTables) return 64;
             return 32;
         case 41:
             return 19;
         case 3:
             if (forCards) return 65.5;
+            if (forTables) return 64;
             return 23;
         case 122:
             if (forCards) return 68;
+            if (forTables) return 64;
             return 32;
         case 15:
             return 20;

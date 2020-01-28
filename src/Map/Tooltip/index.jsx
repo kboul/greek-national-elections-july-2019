@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Context } from '../../context';
-import PartyLogo from '../PartyLogo';
+import PartyLogo from '../../PartyLogo';
 import Spinner from '../Spinner';
 import useEpsFetcher from './hooks';
 import { tooltipY, partyAbbreviation } from './utils';

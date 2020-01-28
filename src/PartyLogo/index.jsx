@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { partyLogo, partyLogoWidth } from './utils';
 
-const PartyLogo = ({ partyId, forCards }) => {
+const PartyLogo = ({ partyId, useFor }) => {
     return (
         <img
-            width={partyLogoWidth(partyId, forCards)}
-            height={forCards ? 56 : 20}
+            width={partyLogoWidth(partyId, useFor)}
+            height={useFor === 'cards' || useFor === 'tables' ? 56 : 20}
             src={partyLogo(partyId)}
             alt={partyLogo(partyId)}
         />
@@ -14,12 +14,12 @@ const PartyLogo = ({ partyId, forCards }) => {
 };
 
 PartyLogo.defaultProps = {
-    forCards: false
+    useFor: ''
 };
 
 PartyLogo.propTypes = {
     partyId: PropTypes.number.isRequired,
-    forCards: PropTypes.bool
+    useFor: PropTypes.string
 };
 
 export default PartyLogo;

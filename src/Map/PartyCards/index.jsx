@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PartyLogo from '../PartyLogo';
+import PartyLogo from '../../PartyLogo';
 import Spinner from '../Spinner';
 import useEpik1Fetcher from './hooks';
 import { borderColor } from './utils';
@@ -29,7 +29,7 @@ const PartyCards = () => {
                                         <div className={styles.logo}>
                                             <PartyLogo
                                                 partyId={PARTY_ID}
-                                                forCards
+                                                useFor="cards"
                                             />
                                         </div>
                                         <div className={styles.percentage}>
