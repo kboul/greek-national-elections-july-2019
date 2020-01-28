@@ -18,7 +18,7 @@ const ResultTable = () => {
                 <td>{getPrefectureName(EP_ID)}</td>
                 <td>{Rank}</td>
                 <td>{`${roundDecimals(Perc)} %`}</td>
-                <td>{VOTES}</td>
+                <td>{VOTES.toLocaleString()}</td>
                 <td>{Edres}</td>
             </tr>
         ));
