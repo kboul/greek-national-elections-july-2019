@@ -7,7 +7,7 @@ import Provider from './Provider';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <Router basename={`${process.env.PUBLIC_URL} /`}>
+    <Router basename={`${process.env.PUBLIC_URL}/`}>
         <Provider>
             <App />
         </Provider>
