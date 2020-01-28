@@ -32,9 +32,11 @@ const ResultTable = () => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.partyName}>
+            <div className={styles.partyNameContainer}>
                 <PartyLogo partyId={parseInt(id, 10)} useFor="tables" />
-                {partyName(parseInt(id, 10))}
+                <span className={styles.partyName}>
+                    {partyName(parseInt(id, 10))}
+                </span>
             </div>
             <table className={styles.results}>
                 <thead>
