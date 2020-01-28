@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import PartyLogo from '../PartyLogo';
 import Spinner from '../Map/Spinner';
 import { usePartyResultFetcher } from './hooks';
@@ -37,6 +37,11 @@ const ResultTable = () => {
                 <span className={styles.partyName}>
                     {partyName(parseInt(id, 10))}
                 </span>
+                <div className={styles.goBackContainer}>
+                    <Link to="/">
+                        <button type="button">Go back</button>
+                    </Link>
+                </div>
             </div>
             <table className={styles.results}>
                 <thead>
