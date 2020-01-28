@@ -15,15 +15,6 @@ const createPrefectureList = () =>
 
 /**
  *
- * @param {number} id
- * @returns {string} - prefecture name
- */
-
-const getPrefectureName = id =>
-    createPrefectureList().map(pref => pref.EP_ID === id && pref.name);
-
-/**
- *
  * @param {number} partyId
  * @returns {string} - party name
  */
@@ -55,4 +46,4 @@ const partyName = partyId => {
     }
 };
 
-export { getPrefectureName, partyName };
+export { createPrefectureList, partyName };
