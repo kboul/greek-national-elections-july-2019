@@ -22,4 +22,37 @@ const createPrefectureList = () =>
 const getPrefectureName = id =>
     createPrefectureList().map(pref => pref.EP_ID === id && pref.name);
 
-export default getPrefectureName;
+/**
+ *
+ * @param {number} partyId
+ * @returns {string} - party name
+ */
+
+const partyName = partyId => {
+    switch (partyId) {
+        case 2:
+            return 'NEA DIMOKRATIA';
+        case 4:
+            return 'SYNASPISMOS RIZOSPASTIKIS ARISTERAS';
+        case 106:
+            return 'KINIMA ALLAGIS';
+        case 108:
+            return 'ELLINIKI LYSI';
+        case 41:
+            return 'CHRYSI AVGI';
+        case 3:
+            return 'KOMMOUNISTIKO KOMMA ELLADAS';
+        case 122:
+            return 'MERA25';
+        case 15:
+            return 'EN. KENTROON...';
+        case 123:
+            return 'PLEFSI EL...';
+        case 60:
+            return 'DIMIOURGIA...';
+        default:
+            return '';
+    }
+};
+
+export { getPrefectureName, partyName };

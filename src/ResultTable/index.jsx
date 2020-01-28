@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import PartyLogo from '../Map/PartyLogo';
 import Spinner from '../Map/Spinner';
 import { usePartyResultFetcher } from './hooks';
-import { roundDecimals, partyName } from '../utils';
+import { roundDecimals } from '../utils';
+import { getPrefectureName, partyName } from './utils';
 import styles from './index.module.sass';
-import getPrefectureName from './utils';
 
 const ResultTable = () => {
     const { id } = useParams();

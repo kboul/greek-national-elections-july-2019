@@ -3,8 +3,8 @@ import { Context } from '../../context';
 import PartyLogo from '../PartyLogo';
 import Spinner from '../Spinner';
 import useEpsFetcher from './hooks';
-import { tooltipY } from './utils';
-import { partyName, roundDecimals } from '../../utils';
+import { tooltipY, partyAbbreviation } from './utils';
+import { roundDecimals } from '../../utils';
 import styles from './index.module.sass';
 
 const Tooltip = () => {
@@ -24,7 +24,7 @@ const Tooltip = () => {
                                             <PartyLogo partyId={PARTY_ID} />
                                         </td>
                                         <td className={styles.tdRightPadding}>
-                                            {partyName(PARTY_ID)}
+                                            {partyAbbreviation(PARTY_ID)}
                                         </td>
                                         <td className={styles.tdRightPadding}>
                                             {`${roundDecimals(Perc)} %`}
