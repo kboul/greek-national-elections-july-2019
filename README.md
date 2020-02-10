@@ -21,3 +21,9 @@ npm start
 browser listens to [http://localhost:3000](http://localhost:3000) as default port
 
 Elections' data & images were taken from [Hellenic Republic's Ministry of Interior](https://ekloges.ypes.gr/).
+
+## Eslint
+
+```
+npm run lint
+```
