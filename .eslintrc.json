@@ -22,6 +22,7 @@
         "react/jsx-props-no-spreading": "off",
         "no-console": "off",
         "react/jsx-closing-bracket-location": "off",
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off", 
+        "arrow-body-style": "off"
     }
 }
