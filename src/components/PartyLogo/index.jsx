@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { partyLogo, partyLogoWidth } from './utils';
 
-const PartyLogo = ({ partyId, useFor }) => {
+export default function PartyLogo({ partyId, useFor = '' }) {
     return (
         <img
             width={partyLogoWidth(partyId, useFor)}
@@ -11,15 +11,9 @@ const PartyLogo = ({ partyId, useFor }) => {
             alt={partyLogo(partyId)}
         />
     );
-};
-
-PartyLogo.defaultProps = {
-    useFor: ''
-};
+}
 
 PartyLogo.propTypes = {
     partyId: PropTypes.number.isRequired,
-    useFor: PropTypes.string
+    useFor: PropTypes.string.isRequired
 };
-
-export default PartyLogo;

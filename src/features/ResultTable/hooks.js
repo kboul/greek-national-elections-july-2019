@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import httpService from '../httpService';
+import httpService from '../../httpService';
 
-export const usePartyResultFetcher = partyId => {
+export default function usePartyResultFetcher(partyId) {
     const [partyResults, setPartyResults] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -27,6 +27,4 @@ export const usePartyResultFetcher = partyId => {
     }, [partyId]);
 
     return [partyResults, loading, error];
-};
-
-export default usePartyResultFetcher;
+}

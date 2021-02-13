@@ -1,7 +1,7 @@
 import json from '../Map/greece-prefectures.json';
 
 /**
- * @returns Array<{name: string, name_created: string, EP_ID: string}>
+ * @returns {Array<{name: string, name_created: string, EP_ID: string}>}
  */
 
 const createPrefectureList = () =>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import httpService from '../../httpService';
+import httpService from '../../../httpService';
 
 /**
  * fetches total party results

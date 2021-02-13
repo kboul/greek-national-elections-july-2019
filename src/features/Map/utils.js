@@ -5,7 +5,7 @@
  * @returns {GeoJson} - with winning party id injected
  */
 
-export const updateGeoJson = (featureCollection, epsData) => {
+const updateGeoJson = (featureCollection, epsData) => {
     const { features } = featureCollection;
 
     features.forEach(feature => {
@@ -21,3 +21,5 @@ export const updateGeoJson = (featureCollection, epsData) => {
         });
     });
 };
+
+export { updateGeoJson };

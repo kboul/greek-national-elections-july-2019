@@ -1,4 +1,4 @@
-export const dataLayer = {
+const dataLayer = {
     id: 'data',
     type: 'fill',
     paint: {
@@ -13,3 +13,5 @@ export const dataLayer = {
         'fill-outline-color': 'white'
     }
 };
+
+export { dataLayer };

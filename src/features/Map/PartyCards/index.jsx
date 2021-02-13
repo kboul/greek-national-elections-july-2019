@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PartyLogo from '../../PartyLogo';
-import Spinner from '../Spinner';
+
+import PartyLogo from '../../../components/PartyLogo';
+import Spinner from '../../../components/Spinner';
 import useEpik1Fetcher from './hooks';
 import { borderColor } from './utils';
-import { roundDecimals } from '../../utils';
+import { roundDecimals } from '../../../utils';
 import styles from './index.module.sass';
 
 const PartyCards = () => {

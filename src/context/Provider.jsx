@@ -1,8 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { Context } from './context';
 
-const Provider = ({ children }) => {
+import { Context } from '.';
+
+export default function Provider({ children }) {
     const [hoveredFeature, setHoveredFeature] = useState(null);
     const [x, setX] = useState(null);
     const [y, setY] = useState(null);
@@ -30,10 +31,8 @@ const Provider = ({ children }) => {
             {children}
         </Context.Provider>
     );
-};
+}
 
 Provider.propTypes = {
     children: PropTypes.element.isRequired
 };
-
-export default Provider;

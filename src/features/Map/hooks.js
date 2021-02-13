@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import json from './greece-prefectures.json';
-import { updateGeoJson } from './utils';
-import httpService from '../httpService';
 
-const usePrefectureGeoJSON = () => {
+import { updateGeoJson } from './utils';
+import httpService from '../../httpService';
+import json from './greece-prefectures.json';
+
+export default function usePrefectureGeoJSON() {
     const [geojson, setGeoJson] = useState(null);
 
     useEffect(() => {
@@ -23,6 +24,4 @@ const usePrefectureGeoJSON = () => {
     }, [geojson]);
 
     return geojson;
-};
-
-export default usePrefectureGeoJSON;
+}
