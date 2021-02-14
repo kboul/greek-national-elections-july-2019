@@ -1,12 +1,12 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, { Source, Layer } from 'react-map-gl';
 
 import PartyCards from './PartyCards';
 import Tooltip from './Tooltip';
 import { Context } from '../../context';
+import { useBrowserHeight } from '../../hooks';
 import usePrefectureGeoJSON from './hooks';
-
 import { dataLayer, mapSettings, mapViewport } from './constants';
 
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
@@ -37,6 +37,15 @@ export default function Map() {
         setX(offsetX);
         setY(offsetY);
     };
+
+    const browserHeight = useBrowserHeight();
+    useEffect(() => {
+        const bigBrowserHeight = browserHeight > 970;
+        setViewport(prevState => ({
+            ...prevState,
+            zoom: bigBrowserHeight ? 6 : 5
+        }));
+    }, [browserHeight]);
 
     return (
         <ReactMapGL
