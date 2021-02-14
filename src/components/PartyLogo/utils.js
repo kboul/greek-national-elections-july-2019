@@ -15,7 +15,7 @@ import dimiourgia from './assets/dimiourgia.png';
  * @returns {string} - img src
  */
 
-export const partyLogo = partyId => {
+const partyLogo = partyId => {
     switch (partyId) {
         case 2:
             return nd;
@@ -48,7 +48,7 @@ export const partyLogo = partyId => {
  * @returns {number} - party logo width
  */
 
-export const partyLogoWidth = (partyId, useFor) => {
+const partyLogoWidth = (partyId, useFor) => {
     const forCards = useFor === 'cards';
     const forTables = useFor === 'tables';
     switch (partyId) {
@@ -87,3 +87,5 @@ export const partyLogoWidth = (partyId, useFor) => {
             return null;
     }
 };
+
+export { partyLogo, partyLogoWidth };

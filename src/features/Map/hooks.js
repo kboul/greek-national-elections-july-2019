@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
-import json from './greece-prefectures.json';
-import { updateGeoJson } from './utils';
-import httpService from '../httpService';
 
-const usePrefectureGeoJSON = () => {
+import { updateGeoJson } from './utils';
+import electionsApi from '../../api/electionsApi';
+import json from './greece-prefectures.json';
+
+export default function usePrefectureGeoJSON() {
     const [geojson, setGeoJson] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 // get the winning party on each prefecture via eps.js
-                const { data } = await httpService.get('/current/dyn/v/eps.js');
+                const { data } = await electionsApi.getPartyPercentages();
                 updateGeoJson(json, data);
                 setGeoJson(json);
             } catch (err) {
@@ -20,9 +21,7 @@ const usePrefectureGeoJSON = () => {
             }
         };
         fetchData();
-    }, [geojson]);
+    }, []);
 
     return geojson;
-};
-
-export default usePrefectureGeoJSON;
+}

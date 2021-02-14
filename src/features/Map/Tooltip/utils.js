@@ -4,7 +4,7 @@
  * @returns {string} - party name abbreviation
  */
 
-export const partyAbbreviation = partyId => {
+const partyAbbreviation = partyId => {
     switch (partyId) {
         case 2:
             return 'ND';
@@ -37,4 +37,6 @@ export const partyAbbreviation = partyId => {
  * @returns {number} - tooltip y coordinate on map
  */
 
-export const tooltipY = mapY => (mapY > 700 ? mapY - 300 : mapY);
+const tooltipY = mapY => (mapY > 700 ? mapY - 300 : mapY);
+
+export { partyAbbreviation, tooltipY };

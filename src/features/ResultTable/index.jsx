@@ -1,14 +1,14 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import orderBy from 'lodash.orderby';
-import PartyLogo from '../PartyLogo';
-import Spinner from '../Map/Spinner';
-import { usePartyResultFetcher } from './hooks';
-import { roundDecimals } from '../utils';
+
+import { PartyLogo, Spinner } from '../../components';
+import usePartyResultFetcher from './hooks';
+import { roundDecimals } from '../../utils';
 import { partyName, createPrefectureList } from './utils';
 import styles from './index.module.sass';
 
-const ResultTable = () => {
+export default function ResultTable() {
     const { id } = useParams();
     const [partyResults, loading] = usePartyResultFetcher(id);
 
@@ -71,6 +71,4 @@ const ResultTable = () => {
             </table>
         </div>
     );
-};
-
-export default ResultTable;
+}

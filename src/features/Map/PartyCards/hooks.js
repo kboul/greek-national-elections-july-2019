@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
-import httpService from '../../httpService';
+
+import electionsApi from '../../../api/electionsApi';
 
 /**
  * fetches total party results
  */
 
-const useEpik1Fetcher = () => {
-    const [epik1Data, setEpik1Data] = useState(null);
+export default function useResultsPerPerfecture() {
+    const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
@@ -16,10 +17,8 @@ const useEpik1Fetcher = () => {
 
         const fetchData = async () => {
             try {
-                const { data } = await httpService.get(
-                    '/current/dyn1/v/epik_1.js'
-                );
-                setEpik1Data(data);
+                const response = await electionsApi.getResultsPerPerfecture();
+                setData(response.data);
             } catch (err) {
                 setError(true);
             }
@@ -28,7 +27,5 @@ const useEpik1Fetcher = () => {
         fetchData();
     }, []);
 
-    return [epik1Data, loading, error];
-};
-
-export default useEpik1Fetcher;
+    return [data, loading, error];
+}

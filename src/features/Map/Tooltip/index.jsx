@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
-import { Context } from '../../context';
-import PartyLogo from '../../PartyLogo';
-import Spinner from '../Spinner';
+
+import PartyLogo from '../../../components/PartyLogo';
+import Spinner from '../../../components/Spinner';
+import { Context } from '../../../context';
 import useEpsFetcher from './hooks';
 import { tooltipY, partyAbbreviation } from './utils';
-import { roundDecimals } from '../../utils';
+import { roundDecimals } from '../../../utils';
 import styles from './index.module.sass';
 
-const Tooltip = () => {
+export default function Tooltip() {
     const { hoveredFeature, x, y, prefectureId } = useContext(Context);
     const [electionResults, loading] = useEpsFetcher(prefectureId);
 
@@ -46,6 +47,4 @@ const Tooltip = () => {
             {loading ? <Spinner /> : table}
         </div>
     ) : null;
-};
-
-export default Tooltip;
+}

@@ -4,7 +4,7 @@
  * @returns {string} - border style
  */
 
-export const borderColor = (partyId = null) => {
+const borderColor = (partyId = null) => {
     let border = '2px solid ';
     switch (partyId) {
         case 2:
@@ -30,3 +30,5 @@ export const borderColor = (partyId = null) => {
             return border;
     }
 };
+
+export { borderColor };

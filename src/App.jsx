@@ -1,7 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Map from './Map';
-import ResultTable from './ResultTable';
+
+import Map from './features/Map';
+import ResultTable from './features/ResultTable';
 
 const App = () => {
     return (
