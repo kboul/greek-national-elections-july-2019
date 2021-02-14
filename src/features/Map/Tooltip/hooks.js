@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import httpService from '../../../httpService';
+
+import electionsApi from '../../../api/electionsApi';
 
 /**
  * election results per prefecture
@@ -7,7 +8,7 @@ import httpService from '../../../httpService';
  * @returns {Array}
  */
 
-const useEpsFetcher = prefectureId => {
+export default function useEpsFetcher(prefectureId) {
     const [results, setResults] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -20,8 +21,8 @@ const useEpsFetcher = prefectureId => {
             if (!prefectureId || prefectureId === -1) return;
 
             try {
-                const response = await httpService.get(
-                    `/current/dyn/v/ep_${prefectureId}.js`
+                const response = await electionsApi.getTooltipResults(
+                    prefectureId
                 );
                 setResults(response);
             } catch (err) {
@@ -33,6 +34,4 @@ const useEpsFetcher = prefectureId => {
     }, [prefectureId]);
 
     return [results, loading, error];
-};
-
-export default useEpsFetcher;
+}

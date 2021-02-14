@@ -1,20 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import PartyLogo from '../../../components/PartyLogo';
-import Spinner from '../../../components/Spinner';
-import useEpik1Fetcher from './hooks';
+import { PartyLogo, Spinner } from '../../../components';
+import useResultsPerPerfecture from './hooks';
 import { borderColor } from './utils';
 import { roundDecimals } from '../../../utils';
 import styles from './index.module.sass';
 
-const PartyCards = () => {
-    const [epik1Data, loading] = useEpik1Fetcher();
+export default function PartyCards() {
+    const [data, loading] = useResultsPerPerfecture();
 
     const cards = (
         <>
-            {epik1Data &&
-                epik1Data.party.map(
+            {data &&
+                data.party.map(
                     ({ Perc, PARTY_ID, Edres, EdresEpik }, index) => {
                         if (index < 6)
                             return (
@@ -63,6 +62,4 @@ const PartyCards = () => {
     return (
         <div className={styles.cardContainer}>{loading ? spinner : cards}</div>
     );
-};
-
-export default PartyCards;
+}

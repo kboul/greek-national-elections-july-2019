@@ -15,5 +15,5 @@ export default function PartyLogo({ partyId, useFor = '' }) {
 
 PartyLogo.propTypes = {
     partyId: PropTypes.number.isRequired,
-    useFor: PropTypes.string.isRequired
+    useFor: PropTypes.string
 };

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.interceptors.response.use(null, (error) => {
+axios.interceptors.response.use(null, error => {
     const expectedError =
         error.response &&
         error.response.status >= 400 &&
@@ -12,5 +12,5 @@ axios.interceptors.response.use(null, (error) => {
 });
 
 export default {
-    get: axios.get,
+    get: axios.get
 };

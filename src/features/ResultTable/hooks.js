@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import httpService from '../../httpService';
+
+import electionsApi from '../../api/electionsApi';
 
 export default function usePartyResultFetcher(partyId) {
     const [partyResults, setPartyResults] = useState(null);
@@ -14,9 +15,7 @@ export default function usePartyResultFetcher(partyId) {
             if (!partyId) return;
 
             try {
-                const { data } = await httpService.get(
-                    `/current/dyn/v/party_${partyId}.js`
-                );
+                const { data } = await electionsApi.getResultsPerParty(partyId);
                 setPartyResults(data);
             } catch (err) {
                 setError(true);

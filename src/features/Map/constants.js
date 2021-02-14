@@ -14,4 +14,18 @@ const dataLayer = {
     }
 };
 
-export { dataLayer };
+const mapSettings = {
+    dragPan: false,
+    scrollZoom: false,
+    doubleClickZoom: false
+};
+
+const mapViewport = {
+    width: '100vw',
+    height: '100vh',
+    latitude: 39.0742073,
+    longitude: 23.727539,
+    zoom: 6
+};
+
+export { dataLayer, mapSettings, mapViewport };
