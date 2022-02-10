@@ -1,5 +1,3 @@
-import React from 'react';
-
 import loader from './spinner.gif';
 import styles from './index.module.sass';
 

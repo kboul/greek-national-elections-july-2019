@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 import { Context } from '.';
@@ -22,6 +22,7 @@ export default function Provider({ children }) {
 
     return (
         <Context.Provider
+            // eslint-disable-next-line react/jsx-no-constructed-context-values
             value={{
                 ...hoveredFeatureProvider,
                 ...xProvider,
