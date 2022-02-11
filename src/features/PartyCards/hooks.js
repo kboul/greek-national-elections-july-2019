@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import electionsApi from '../../../api/electionsApi';
+import electionsApi from '../../api/electionsApi';
 
 /**
  * fetches total party results

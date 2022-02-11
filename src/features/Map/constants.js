@@ -20,12 +20,14 @@ const mapSettings = {
     doubleClickZoom: false
 };
 
-const mapViewport = {
-    width: '100vw',
-    height: '100vh',
+const style = { width: '100vw', height: '84.6vh' };
+
+const initialViewState = {
     latitude: 39.0742073,
     longitude: 23.727539,
     zoom: 6
 };
 
-export { dataLayer, mapSettings, mapViewport };
+const mapStyle = 'mapbox://styles/mapbox/streets-v11';
+
+export { dataLayer, mapSettings, mapStyle, initialViewState, style };
