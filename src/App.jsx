@@ -1,17 +1,20 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
+import { Provider } from './context';
 import Map from './features/Map';
 import ResultTable from './features/ResultTable';
 
-const App = () => {
+export default function App() {
     return (
-        <Switch>
-            <Route path="/parties/:id" component={ResultTable} />
-            <Route path="/parties" component={ResultTable} />
-            <Route path="/" component={Map} />
-        </Switch>
+        <Provider>
+            <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
+                <Routes>
+                    <Route path="parties" element={<ResultTable />}>
+                        <Route path=":id" element={<ResultTable />} />
+                    </Route>
+                    <Route path="/" element={<Map />} />
+                </Routes>
+            </BrowserRouter>
+        </Provider>
     );
-};
-
-export default App;
+}

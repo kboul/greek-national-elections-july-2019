@@ -1,10 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { PartyLogo, Spinner } from '../../../components';
+import { PartyLogo, Spinner } from '../../components';
 import useResultsPerPerfecture from './hooks';
 import { borderColor } from './utils';
-import { roundDecimals } from '../../../utils';
+import { roundDecimals } from '../../utils';
 import styles from './index.module.sass';
 
 export default function PartyCards() {
