@@ -1,9 +1,9 @@
+import { Container, Td } from './styles';
 import { PartyLogo, Spinner } from '../../../components';
 import { useAppContext } from '../../../context';
 import useEpsFetcher from './hooks';
 import { tooltipY, partyAbbreviation } from './utils';
 import { roundDecimals } from '../../../utils';
-import { Container, Td } from './styledComponents';
 
 export default function Tooltip() {
     const {
