@@ -1,11 +1,11 @@
 import { useParams, Link } from 'react-router-dom';
 import orderBy from 'lodash.orderby';
 
+import * as Styled from './styles';
 import { PartyLogo, Spinner } from '../../components';
 import usePartyResultFetcher from './hooks';
 import { roundDecimals } from '../../utils';
 import { partyName, createPrefectureList } from './utils';
-import styles from './index.module.sass';
 
 export default function ResultTable() {
     const { id } = useParams();
@@ -26,48 +26,48 @@ export default function ResultTable() {
 
     const tableBody = results.map(
         ({ EP_ID, VOTES, Perc, Rank, Edres, Name }) => (
-            <tr className={styles.tr} key={EP_ID}>
-                <td>{Name}</td>
-                <td>{Rank}</td>
-                <td>{`${roundDecimals(Perc)} %`}</td>
-                <td>{VOTES.toLocaleString()}</td>
-                <td>{Edres}</td>
-            </tr>
+            <Styled.Tr key={EP_ID}>
+                <Styled.Td>{Name}</Styled.Td>
+                <Styled.Td>{Rank}</Styled.Td>
+                <Styled.Td>{`${roundDecimals(Perc)} %`}</Styled.Td>
+                <Styled.Td>{VOTES.toLocaleString()}</Styled.Td>
+                <Styled.Td>{Edres}</Styled.Td>
+            </Styled.Tr>
         )
     );
 
     if (loading)
         return (
-            <div className={styles.spinner}>
+            <Styled.SpinnerContainer>
                 <Spinner />
-            </div>
+            </Styled.SpinnerContainer>
         );
 
     return (
-        <div className={styles.container}>
-            <div className={styles.partyNameContainer}>
+        <Styled.Container>
+            <Styled.PartyNameContainer>
                 <PartyLogo partyId={parseInt(id, 10)} useFor="tables" />
-                <span className={styles.partyName}>
+                <Styled.PartyName>
                     {partyName(parseInt(id, 10))}
-                </span>
-                <div className={styles.goBackContainer}>
+                </Styled.PartyName>
+                <Styled.GoBackContainer>
                     <Link to="/">
                         <button type="button">Go back</button>
                     </Link>
-                </div>
-            </div>
-            <table className={styles.results}>
+                </Styled.GoBackContainer>
+            </Styled.PartyNameContainer>
+            <Styled.Table>
                 <thead>
-                    <tr className={styles.tr}>
-                        <th>Name</th>
-                        <th>Rank</th>
-                        <th>Percent</th>
-                        <th>Votes</th>
-                        <th>Seats</th>
-                    </tr>
+                    <Styled.Tr>
+                        <Styled.Th>Name</Styled.Th>
+                        <Styled.Th>Rank</Styled.Th>
+                        <Styled.Th>Percent</Styled.Th>
+                        <Styled.Th>Votes</Styled.Th>
+                        <Styled.Th>Seats</Styled.Th>
+                    </Styled.Tr>
                 </thead>
                 <tbody>{tableBody}</tbody>
-            </table>
-        </div>
+            </Styled.Table>
+        </Styled.Container>
     );
 }
