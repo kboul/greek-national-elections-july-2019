@@ -3,7 +3,7 @@ import { useAppContext } from '../../../context';
 import useEpsFetcher from './hooks';
 import { tooltipY, partyAbbreviation } from './utils';
 import { roundDecimals } from '../../../utils';
-import styles from './index.module.sass';
+import { Container, Td } from './styledComponents';
 
 export default function Tooltip() {
     const {
@@ -20,15 +20,11 @@ export default function Tooltip() {
                             if (Perc >= 1) {
                                 return (
                                     <tr key={PARTY_ID}>
-                                        <td className={styles.tdRightPadding}>
+                                        <Td>
                                             <PartyLogo partyId={PARTY_ID} />
-                                        </td>
-                                        <td className={styles.tdRightPadding}>
-                                            {partyAbbreviation(PARTY_ID)}
-                                        </td>
-                                        <td className={styles.tdRightPadding}>
-                                            {`${roundDecimals(Perc)} %`}
-                                        </td>
+                                        </Td>
+                                        <Td>{partyAbbreviation(PARTY_ID)}</Td>
+                                        <Td>{`${roundDecimals(Perc)} %`}</Td>
                                         <td>{Edres > 0 ? Edres : ''}</td>
                                     </tr>
                                 );
@@ -41,9 +37,9 @@ export default function Tooltip() {
     );
 
     return hoveredFeature && hoveredFeature.properties.EP_ID !== -1 ? (
-        <div className={styles.tooltip} style={{ left: x, top: tooltipY(y) }}>
+        <Container style={{ left: x, top: tooltipY(y) }}>
             <h4>{hoveredFeature.properties.name}</h4>
             {loading ? <Spinner /> : table}
-        </div>
+        </Container>
     ) : null;
 }

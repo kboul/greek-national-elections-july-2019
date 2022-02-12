@@ -57,7 +57,7 @@ export default function Map() {
             ...prevState,
             zoom: bigBrowserHeight ? 6 : 5
         }));
-        setMapHeight(bigBrowserHeight ? '84.6vh' : '80.6vh');
+        setMapHeight(bigBrowserHeight ? initialMapHeight : '80.6vh');
     }, [browserHeight]);
 
     const style = useMemo(
