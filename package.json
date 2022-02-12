@@ -10,7 +10,7 @@
         "gh-pages": "^3.2.3",
         "lodash.orderby": "^4.6.0",
         "mapbox-gl": "^2.7.0",
-        "node-sass": "^4.14.0",
+        "node-sass": "^7.0.0",
         "prop-types": "^15.8.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
