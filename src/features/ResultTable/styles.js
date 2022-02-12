@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+const Button = styled.button``;
+
 const Container = styled.div`
     margin: 15px;
 `;
@@ -35,6 +37,10 @@ const borderWithPadding = css`
     padding: 8px;
 `;
 
+const TBody = styled.tbody``;
+
+const THead = styled.thead``;
+
 const Th = styled.th`
     padding-top: 12px;
     padding-bottom: 12px;
@@ -59,20 +65,16 @@ const Tr = styled.tr`
     }
 `;
 
-const SpinnerContainer = styled.div`
-    align-items: center;
-    display: flex;
-    justify-content: center;
-`;
-
 export {
+    Button,
     Container,
     GoBackContainer,
     PartyNameContainer,
     PartyName,
     Table,
+    TBody,
+    THead,
     Td,
     Th,
-    Tr,
-    SpinnerContainer
+    Tr
 };

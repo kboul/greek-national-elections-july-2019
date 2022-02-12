@@ -9,7 +9,6 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: lightblue;
 `;
 
 const Card = styled.div`

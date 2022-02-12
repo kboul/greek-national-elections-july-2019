@@ -36,12 +36,7 @@ export default function ResultTable() {
         )
     );
 
-    if (loading)
-        return (
-            <Styled.SpinnerContainer>
-                <Spinner />
-            </Styled.SpinnerContainer>
-        );
+    if (loading) return <Spinner />;
 
     return (
         <Styled.Container>
@@ -52,12 +47,12 @@ export default function ResultTable() {
                 </Styled.PartyName>
                 <Styled.GoBackContainer>
                     <Link to="/">
-                        <button type="button">Go back</button>
+                        <Styled.Button>Go back</Styled.Button>
                     </Link>
                 </Styled.GoBackContainer>
             </Styled.PartyNameContainer>
             <Styled.Table>
-                <thead>
+                <Styled.THead>
                     <Styled.Tr>
                         <Styled.Th>Name</Styled.Th>
                         <Styled.Th>Rank</Styled.Th>
@@ -65,8 +60,8 @@ export default function ResultTable() {
                         <Styled.Th>Votes</Styled.Th>
                         <Styled.Th>Seats</Styled.Th>
                     </Styled.Tr>
-                </thead>
-                <tbody>{tableBody}</tbody>
+                </Styled.THead>
+                <Styled.TBody>{tableBody}</Styled.TBody>
             </Styled.Table>
         </Styled.Container>
     );
