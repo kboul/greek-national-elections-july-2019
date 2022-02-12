@@ -11,8 +11,9 @@ export default function useBrowserHeight() {
 
         window.addEventListener('resize', updateWindowDimensions);
 
-        return () =>
+        return () => {
             window.removeEventListener('resize', updateWindowDimensions);
+        };
     }, []);
 
     return browserHeight;

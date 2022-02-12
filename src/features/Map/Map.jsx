@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect } from 'react';
+import { useCallback, useState, useEffect, useMemo } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, { Source, Layer } from 'react-map-gl';
 
@@ -12,7 +12,8 @@ import {
     mapSettings,
     mapStyle,
     initialViewState,
-    style
+    initialMapHeight,
+    initialMapWidth
 } from './constants';
 
 const mapboxToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
@@ -21,6 +22,7 @@ export default function Map() {
     const { dispatch } = useAppContext();
 
     const [viewState, setViewState] = useState(initialViewState);
+    const [mapHeight, setMapHeight] = useState(initialMapHeight);
 
     const geojsonData = usePrefectureGeoJSON();
 
@@ -55,7 +57,13 @@ export default function Map() {
             ...prevState,
             zoom: bigBrowserHeight ? 6 : 5
         }));
+        setMapHeight(bigBrowserHeight ? '84.6vh' : '80.6vh');
     }, [browserHeight]);
+
+    const style = useMemo(
+        () => ({ width: initialMapWidth, height: mapHeight }),
+        [mapHeight]
+    );
 
     return (
         <>
