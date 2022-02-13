@@ -1,10 +1,23 @@
+import styled from 'styled-components';
+
 import loader from './spinner.gif';
-import styles from './index.module.sass';
 
 export default function Spinner() {
     return (
-        <div className={styles.loader}>
-            <img src={loader} alt="loader" />
-        </div>
+        <Container>
+            <Img src={loader} alt="loader" />
+        </Container>
     );
 }
+
+const Container = styled.div`
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+`;
+
+const Img = styled.img`
+    width: 40px;
+    height: 40px;
+`;
