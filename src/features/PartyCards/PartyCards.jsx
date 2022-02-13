@@ -1,10 +1,8 @@
-import { Link } from 'react-router-dom';
-
+import * as Styled from './styles';
 import { PartyLogo, Spinner } from '../../components';
 import useResultsPerPerfecture from './hooks';
 import { borderColor } from './utils';
 import { roundDecimals } from '../../utils';
-import styles from './index.module.sass';
 
 export default function PartyCards() {
     const [data, loading] = useResultsPerPerfecture();
@@ -16,49 +14,47 @@ export default function PartyCards() {
                     ({ Perc, PARTY_ID, Edres, EdresEpik }, index) => {
                         if (index < 6)
                             return (
-                                <Link
+                                <Styled.LinkWithoutUnderline
                                     key={PARTY_ID}
-                                    className={styles.link}
                                     to={`parties/${PARTY_ID}`}>
-                                    <div
-                                        className={styles.card}
+                                    <Styled.Card
                                         style={{
                                             border: borderColor(PARTY_ID)
                                         }}>
-                                        <div className={styles.logo}>
+                                        <Styled.PartyLogoContainer>
                                             <PartyLogo
                                                 partyId={PARTY_ID}
                                                 useFor="cards"
                                             />
-                                        </div>
-                                        <div className={styles.percentage}>
+                                        </Styled.PartyLogoContainer>
+                                        <Styled.PercentageContainer>
                                             {roundDecimals(Perc)}
-                                        </div>
-                                        <div className={styles.seats}>
+                                        </Styled.PercentageContainer>
+                                        <Styled.SeatsContainer>
                                             {Edres + EdresEpik}
-                                        </div>
-                                    </div>
-                                </Link>
+                                        </Styled.SeatsContainer>
+                                    </Styled.Card>
+                                </Styled.LinkWithoutUnderline>
                             );
                         return null;
                     }
                 )}
-            <Link className={styles.link} to="/">
-                <div className={styles.card} style={{ border: borderColor() }}>
-                    <div className={styles.other}>Other</div>
-                    <div className={styles.percentage}>8.08</div>
-                </div>
-            </Link>
+            <Styled.LinkWithoutUnderline to="/">
+                <Styled.Card style={{ border: borderColor() }}>
+                    <Styled.OtherContainer>Other</Styled.OtherContainer>
+                    <Styled.PercentageContainer>
+                        8.08
+                    </Styled.PercentageContainer>
+                </Styled.Card>
+            </Styled.LinkWithoutUnderline>
         </>
     );
 
     const spinner = (
-        <div className={styles.spinner}>
-            <Spinner />
-        </div>
+        <Styled.SpinnerContainer>
+            <Spinner fullHeight />
+        </Styled.SpinnerContainer>
     );
 
-    return (
-        <div className={styles.cardContainer}>{loading ? spinner : cards}</div>
-    );
+    return <Styled.Container>{loading ? spinner : cards}</Styled.Container>;
 }
