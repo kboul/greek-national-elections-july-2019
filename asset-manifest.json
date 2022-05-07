@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ae0e96d.css",
-    "main.js": "/static/js/main.dfd24779.js",
-    "static/js/483.16589f67.chunk.js": "/static/js/483.16589f67.chunk.js",
-    "static/media/ellysi.jpg": "/static/media/ellysi.53f9499fce75ee244faf.jpg",
-    "static/media/pleusi.svg": "/static/media/pleusi.32b9a33e50c09ddb1d6e98190341a894.svg",
-    "static/media/enwsikntrwwn.svg": "/static/media/enwsikntrwwn.a7046dd0305c5a2f87be56960b21978e.svg",
-    "static/media/kke.svg": "/static/media/kke.b9424cd8b73fd5bc9488bc1a9941db3c.svg",
-    "index.html": "/index.html",
-    "static/media/nd.svg": "/static/media/nd.6cfb4a3d6c2d60bee0aaccfa8a373367.svg",
-    "main.5ae0e96d.css.map": "/static/css/main.5ae0e96d.css.map",
-    "main.dfd24779.js.map": "/static/js/main.dfd24779.js.map",
-    "483.16589f67.chunk.js.map": "/static/js/483.16589f67.chunk.js.map"
+    "main.css": "/greek-national-elections-july-2019/static/css/main.5ae0e96d.css",
+    "main.js": "/greek-national-elections-july-2019/static/js/main.e1e18020.js",
+    "static/js/483.5df2dce0.chunk.js": "/greek-national-elections-july-2019/static/js/483.5df2dce0.chunk.js",
+    "static/media/ellysi.jpg": "/greek-national-elections-july-2019/static/media/ellysi.53f9499fce75ee244faf.jpg",
+    "static/media/pleusi.svg": "/greek-national-elections-july-2019/static/media/pleusi.32b9a33e50c09ddb1d6e98190341a894.svg",
+    "static/media/enwsikntrwwn.svg": "/greek-national-elections-july-2019/static/media/enwsikntrwwn.a7046dd0305c5a2f87be56960b21978e.svg",
+    "static/media/kke.svg": "/greek-national-elections-july-2019/static/media/kke.b9424cd8b73fd5bc9488bc1a9941db3c.svg",
+    "index.html": "/greek-national-elections-july-2019/index.html",
+    "static/media/nd.svg": "/greek-national-elections-july-2019/static/media/nd.6cfb4a3d6c2d60bee0aaccfa8a373367.svg",
+    "main.5ae0e96d.css.map": "/greek-national-elections-july-2019/static/css/main.5ae0e96d.css.map",
+    "main.e1e18020.js.map": "/greek-national-elections-july-2019/static/js/main.e1e18020.js.map",
+    "483.5df2dce0.chunk.js.map": "/greek-national-elections-july-2019/static/js/483.5df2dce0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5ae0e96d.css",
-    "static/js/main.dfd24779.js"
+    "static/js/main.e1e18020.js"
   ]
 }
