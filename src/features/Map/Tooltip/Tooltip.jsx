@@ -1,15 +1,22 @@
+import { useQuery } from '@tanstack/react-query';
+
 import { Container, Td } from './styles';
 import { PartyLogo, Spinner } from '../../../components';
 import { useAppContext } from '../../../context';
-import useEpsFetcher from './hooks';
 import { tooltipY, partyAbbreviation } from './utils';
 import { roundDecimals } from '../../../utils';
+import electionsApi from '../../../api/electionsApi';
 
 export default function Tooltip() {
   const {
     state: { hoveredFeature, x, y, prefectureId }
   } = useAppContext();
-  const [electionResults, loading] = useEpsFetcher(prefectureId);
+
+  const { data: electionResults, isLoading } = useQuery({
+    queryKey: ['electionResults', prefectureId],
+    queryFn: () => electionsApi.getTooltipResults(prefectureId),
+    enabled: !!prefectureId && prefectureId > -1 // equals to !prefectureId || prefectureId === -1
+  });
 
   const table = (
     <table>
@@ -37,7 +44,7 @@ export default function Tooltip() {
   return hoveredFeature && hoveredFeature.properties.EP_ID !== -1 ? (
     <Container style={{ left: x, top: tooltipY(y) }}>
       <h4>{hoveredFeature.properties.name}</h4>
-      {loading ? <Spinner /> : table}
+      {isLoading ? <Spinner /> : table}
     </Container>
   ) : null;
 }
