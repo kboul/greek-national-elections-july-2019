@@ -39,7 +39,7 @@ export default function ResultTable() {
   return (
     <Styled.Container>
       <Styled.PartyNameContainer>
-        <PartyLogo partyId={parseInt(id, 10)} useFor="tables" />
+        <PartyLogo partyId={parseInt(id, 10)} use="tables" />
         <Styled.PartyName>{partyName(parseInt(id, 10))}</Styled.PartyName>
         <Styled.GoBackContainer>
           <Link to="/">

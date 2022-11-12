@@ -2,6 +2,7 @@ import client from './client';
 
 const prefix = '/current/dyn/v';
 
+// fetches total party results
 const getResultsPerPerfecture = () => client.get('/current/dyn1/v/epik_1.js');
 
 const getPartyPercentages = () => client.get(`${prefix}/eps.js`);
