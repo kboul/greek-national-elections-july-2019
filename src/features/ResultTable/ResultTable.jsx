@@ -1,27 +1,32 @@
 import { useParams, Link } from 'react-router-dom';
 import orderBy from 'lodash.orderby';
+import { useQuery } from '@tanstack/react-query';
 
 import * as Styled from './styles';
 import { PartyLogo, Spinner } from '../../components';
-import usePartyResultFetcher from './hooks';
 import { roundDecimals } from '../../utils';
 import { partyName, createPrefectureList } from './utils';
+import electionsApi from '../../api/electionsApi';
 
 export default function ResultTable() {
   const { id } = useParams();
-  const [partyResults, loading] = usePartyResultFetcher(id);
 
-  let results =
-    partyResults &&
-    partyResults.ep.map(partyRes => {
-      let name = null;
-      createPrefectureList().find(pref => {
-        if (pref.EP_ID === partyRes.EP_ID) name = pref.name;
-        return name;
-      });
-      return { ...partyRes, Name: name };
+  const { data: resultsPerParty, isLoading } = useQuery({
+    queryKey: ['resultsPerParty', id],
+    queryFn: () => electionsApi.getResultsPerParty(id),
+    enabled: !!id
+  });
+
+  if (!resultsPerParty && isLoading) return <Spinner fullHeight />;
+
+  let results = resultsPerParty.data.ep.map(partyRes => {
+    let name = null;
+    createPrefectureList().find(pref => {
+      if (pref.EP_ID === partyRes.EP_ID) name = pref.name;
+      return name;
     });
-
+    return { ...partyRes, Name: name };
+  });
   results = orderBy(results, ['Name'], 'asc');
 
   const tableBody = results.map(({ EP_ID, VOTES, Perc, Rank, Edres, Name }) => (
@@ -33,8 +38,6 @@ export default function ResultTable() {
       <Styled.Td>{Edres}</Styled.Td>
     </Styled.Tr>
   ));
-
-  if (loading) return <Spinner fullHeight />;
 
   return (
     <Styled.Container>
