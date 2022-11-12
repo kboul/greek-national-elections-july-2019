@@ -7,14 +7,14 @@ const getResultsPerPerfecture = () => client.get('/current/dyn1/v/epik_1.js');
 const getPartyPercentages = () => client.get(`${prefix}/eps.js`);
 
 const getTooltipResults = prefectureId =>
-    client.get(`${prefix}/ep_${prefectureId}.js`);
+  client.get(`${prefix}/ep_${prefectureId}.js`);
 
 const getResultsPerParty = partyId =>
-    client.get(`${prefix}/party_${partyId}.js`);
+  client.get(`${prefix}/party_${partyId}.js`);
 
 export default {
-    getPartyPercentages,
-    getResultsPerPerfecture,
-    getTooltipResults,
-    getResultsPerParty
+  getPartyPercentages,
+  getResultsPerPerfecture,
+  getTooltipResults,
+  getResultsPerParty
 };

@@ -5,11 +5,11 @@ import json from '../Map/greece-prefectures.json';
  */
 
 const createPrefectureList = () => {
-    return json.features.map(data => ({
-        EP_ID: data.properties.EP_ID,
-        name: data.properties.name,
-        name_greek: data.properties.name_greek
-    }));
+  return json.features.map(data => ({
+    EP_ID: data.properties.EP_ID,
+    name: data.properties.name,
+    name_greek: data.properties.name_greek
+  }));
 };
 
 /**
@@ -19,30 +19,30 @@ const createPrefectureList = () => {
  */
 
 const partyName = partyId => {
-    switch (partyId) {
-        case 2:
-            return 'NEA DIMOKRATIA';
-        case 4:
-            return 'SYNASPISMOS RIZOSPASTIKIS ARISTERAS';
-        case 106:
-            return 'KINIMA ALLAGIS';
-        case 108:
-            return 'ELLINIKI LYSI';
-        case 41:
-            return 'CHRYSI AVGI';
-        case 3:
-            return 'KOMMOUNISTIKO KOMMA ELLADAS';
-        case 122:
-            return 'MERA25';
-        case 15:
-            return 'EN. KENTROON...';
-        case 123:
-            return 'PLEFSI EL...';
-        case 60:
-            return 'DIMIOURGIA...';
-        default:
-            return '';
-    }
+  switch (partyId) {
+    case 2:
+      return 'NEA DIMOKRATIA';
+    case 4:
+      return 'SYNASPISMOS RIZOSPASTIKIS ARISTERAS';
+    case 106:
+      return 'KINIMA ALLAGIS';
+    case 108:
+      return 'ELLINIKI LYSI';
+    case 41:
+      return 'CHRYSI AVGI';
+    case 3:
+      return 'KOMMOUNISTIKO KOMMA ELLADAS';
+    case 122:
+      return 'MERA25';
+    case 15:
+      return 'EN. KENTROON...';
+    case 123:
+      return 'PLEFSI EL...';
+    case 60:
+      return 'DIMIOURGIA...';
+    default:
+      return '';
+  }
 };
 
 export { createPrefectureList, partyName };

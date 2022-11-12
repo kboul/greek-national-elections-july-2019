@@ -5,5 +5,5 @@
  */
 
 export default function roundDecimals(value) {
-    return Math.round(value * 100) / 100;
+  return Math.round(value * 100) / 100;
 }
