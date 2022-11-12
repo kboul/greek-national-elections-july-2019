@@ -21,7 +21,7 @@ const mapSettings = {
 };
 
 const initialMapWidth = '100vw';
-const initialMapHeight = '84.6vh';
+const initialMapHeight = '84vh';
 
 const initialViewState = {
   latitude: 38.5,
