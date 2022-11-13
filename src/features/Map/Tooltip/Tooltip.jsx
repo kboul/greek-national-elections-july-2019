@@ -5,7 +5,7 @@ import { PartyLogo, Spinner } from '../../../components';
 import { useAppContext } from '../../../context';
 import { tooltipY, partyAbbreviation } from './utils';
 import { roundDecimals } from '../../../utils';
-import electionsApi from '../../../api/electionsApi';
+import electionsApi from '../../../api';
 
 export default function Tooltip() {
   const {

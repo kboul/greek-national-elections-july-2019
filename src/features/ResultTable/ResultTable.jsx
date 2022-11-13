@@ -6,7 +6,7 @@ import * as Styled from './styles';
 import { PartyLogo, Spinner } from '../../components';
 import { roundDecimals } from '../../utils';
 import { partyName, createPrefectureList } from './utils';
-import electionsApi from '../../api/electionsApi';
+import electionsApi from '../../api';
 
 export default function ResultTable() {
   const { id } = useParams();

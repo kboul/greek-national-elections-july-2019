@@ -7,7 +7,7 @@ import { changeState, types, useAppContext } from '../../context';
 import PartyCards from '../PartyCards';
 import Tooltip from './Tooltip';
 import { useBrowserHeight } from '../../hooks';
-import electionsApi from '../../api/electionsApi';
+import electionsApi from '../../api';
 import { getSourceData } from './utils';
 import { greekPrefectures } from '../../geoJson';
 import {

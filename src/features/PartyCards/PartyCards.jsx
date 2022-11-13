@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import * as Styled from './styles';
 import { PartyLogo, Spinner } from '../../components';
-import electionsApi from '../../api/electionsApi';
+import electionsApi from '../../api';
 import { borderColor } from './utils';
 import { roundDecimals } from '../../utils';
 
