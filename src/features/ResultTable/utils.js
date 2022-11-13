@@ -1,11 +1,11 @@
-import json from '../Map/greece-prefectures.json';
+import { greekPrefectures } from '../../geoJson';
 
 /**
  * @returns {Array<{name: string, name_created: string, EP_ID: string}>}
  */
 
 const createPrefectureList = () => {
-  return json.features.map(data => ({
+  return greekPrefectures.features.map(data => ({
     EP_ID: data.properties.EP_ID,
     name: data.properties.name,
     name_greek: data.properties.name_greek

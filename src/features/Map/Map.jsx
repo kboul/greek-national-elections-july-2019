@@ -1,12 +1,15 @@
 import { useCallback, useState, useEffect, useMemo } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, { Source, Layer } from 'react-map-gl';
+import { useQuery } from '@tanstack/react-query';
 
 import { changeState, types, useAppContext } from '../../context';
 import PartyCards from '../PartyCards';
 import Tooltip from './Tooltip';
 import { useBrowserHeight } from '../../hooks';
-import usePrefectureGeoJSON from './hooks';
+import electionsApi from '../../api/electionsApi';
+import { getSourceData } from './utils';
+import { greekPrefectures } from '../../geoJson';
 import {
   dataLayer,
   mapSettings,
@@ -24,7 +27,10 @@ export default function Map() {
   const [viewState, setViewState] = useState(initialViewState);
   const [mapHeight, setMapHeight] = useState(initialMapHeight);
 
-  const geojsonData = usePrefectureGeoJSON();
+  const { data: geojsonData } = useQuery({
+    queryKey: ['geojsonData'],
+    queryFn: electionsApi.getPartyPercentages
+  });
 
   const handleViewportChange = newViewport => setViewState(newViewport);
 
@@ -65,6 +71,8 @@ export default function Map() {
     [mapHeight]
   );
 
+  const data = getSourceData(greekPrefectures, geojsonData?.data);
+
   return (
     <>
       <PartyCards />
@@ -77,7 +85,7 @@ export default function Map() {
         onMouseMove={handleMouseMove}
         onViewportChange={handleViewportChange}
         style={style}>
-        <Source type="geojson" data={geojsonData}>
+        <Source type="geojson" data={data}>
           <Layer {...dataLayer} />
         </Source>
         <Tooltip />

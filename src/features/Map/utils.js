@@ -5,10 +5,10 @@
  * @returns {GeoJson} - with winning party id injected
  */
 
-const updateGeoJson = (featureCollection, epsData) => {
-  const { features } = featureCollection;
+const getSourceData = (greekPrefectures, epsData) => {
+  if (!greekPrefectures || !epsData) return {};
 
-  features.forEach(feature => {
+  greekPrefectures?.features.forEach(feature => {
     epsData.forEach(eps => {
       const newFeature = feature;
       if (feature.properties.EP_ID === -1) {
@@ -20,6 +20,8 @@ const updateGeoJson = (featureCollection, epsData) => {
       }
     });
   });
+
+  return greekPrefectures;
 };
 
-export { updateGeoJson };
+export { getSourceData };
