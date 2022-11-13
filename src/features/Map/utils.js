@@ -5,21 +5,23 @@
  * @returns {GeoJson} - with winning party id injected
  */
 
-const updateGeoJson = (featureCollection, epsData) => {
-    const { features } = featureCollection;
+const getSourceData = (greekPrefectures, epsData) => {
+  if (!greekPrefectures || !epsData) return {};
 
-    features.forEach(feature => {
-        epsData.forEach(eps => {
-            const newFeature = feature;
-            if (feature.properties.EP_ID === -1) {
-                // Agio Oros
-                newFeature.properties.win_party = 0;
-            }
-            if (feature.properties.EP_ID === eps.EP_ID) {
-                newFeature.properties.win_party = eps.PARTY_ID;
-            }
-        });
+  greekPrefectures?.features.forEach(feature => {
+    epsData.forEach(eps => {
+      const newFeature = feature;
+      if (feature.properties.EP_ID === -1) {
+        // Agio Oros
+        newFeature.properties.win_party = 0;
+      }
+      if (feature.properties.EP_ID === eps.EP_ID) {
+        newFeature.properties.win_party = eps.PARTY_ID;
+      }
     });
+  });
+
+  return greekPrefectures;
 };
 
-export { updateGeoJson };
+export { getSourceData };

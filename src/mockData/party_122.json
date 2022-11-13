@@ -1,0 +1,606 @@
+{
+  "EPIK_ID": 1,
+  "Updated": "2019-11-08 16:48:56.457",
+  "Gramenoi": 9984934,
+  "Egkyra": 5649527,
+  "Akyra": 77477,
+  "Leyka": 42640,
+  "NumTm": 21544,
+  "NumTmK": 21184,
+  "NumTmE": 227,
+  "NumTmM": 133,
+  "WIN_ID": 2,
+  "official": 0,
+  "ep": [
+    {
+      "EP_ID": 1,
+      "VOTES": 2001,
+      "Perc": 2.385892116182,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 2,
+      "VOTES": 842,
+      "Perc": 1.377798141117,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 3,
+      "VOTES": 1428,
+      "Perc": 2.350269095936,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 4,
+      "VOTES": 1812,
+      "Perc": 3.098813147723,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 5,
+      "VOTES": 2408,
+      "Perc": 3.130118289353,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 6,
+      "VOTES": 14410,
+      "Perc": 4.764156089755,
+      "Edres": 1,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 7,
+      "VOTES": 7577,
+      "Perc": 4.057621763461,
+      "Edres": 1,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 8,
+      "VOTES": 3508,
+      "Perc": 3.130326150002,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 9,
+      "VOTES": 2387,
+      "Perc": 3.807685558869,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 10,
+      "VOTES": 1486,
+      "Perc": 2.703243528405,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 11,
+      "VOTES": 2136,
+      "Perc": 2.498859368967,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 12,
+      "VOTES": 2465,
+      "Perc": 3.05854033799,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 13,
+      "VOTES": 2093,
+      "Perc": 2.776082977425,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 14,
+      "VOTES": 904,
+      "Perc": 2.77760707921,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 15,
+      "VOTES": 2700,
+      "Perc": 2.96322310875,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 16,
+      "VOTES": 918,
+      "Perc": 2.984007281237,
+      "Edres": 0,
+      "Rank": 4,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 17,
+      "VOTES": 522,
+      "Perc": 2.322167356199,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 18,
+      "VOTES": 2721,
+      "Perc": 2.786311132956,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 19,
+      "VOTES": 963,
+      "Perc": 1.981318410007,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 20,
+      "VOTES": 764,
+      "Perc": 2.498936970529,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 21,
+      "VOTES": 803,
+      "Perc": 2.069747660901,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 22,
+      "VOTES": 4398,
+      "Perc": 2.811696863532,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 23,
+      "VOTES": 4033,
+      "Perc": 3.78195390011,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 24,
+      "VOTES": 1740,
+      "Perc": 2.052491890297,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 25,
+      "VOTES": 1445,
+      "Perc": 1.871907143042,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 26,
+      "VOTES": 2689,
+      "Perc": 4.839116038007,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 27,
+      "VOTES": 429,
+      "Perc": 2.808326787117,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 28,
+      "VOTES": 785,
+      "Perc": 3.452826039146,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 29,
+      "VOTES": 730,
+      "Perc": 3.319539811741,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 30,
+      "VOTES": 2883,
+      "Perc": 2.129388216351,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 31,
+      "VOTES": 5339,
+      "Perc": 3.135000557829,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 32,
+      "VOTES": 2066,
+      "Perc": 2.210902553346,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 33,
+      "VOTES": 2418,
+      "Perc": 2.577742716117,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 34,
+      "VOTES": 262,
+      "Perc": 1.837436005329,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 35,
+      "VOTES": 727,
+      "Perc": 3.001651527663,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 36,
+      "VOTES": 2233,
+      "Perc": 3.406819742161,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 37,
+      "VOTES": 3839,
+      "Perc": 3.14059457779,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 38,
+      "VOTES": 9107,
+      "Perc": 3.836173851506,
+      "Edres": 1,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 40,
+      "VOTES": 3916,
+      "Perc": 3.878034046682,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 41,
+      "VOTES": 6479,
+      "Perc": 4.401703885374,
+      "Edres": 1,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 43,
+      "VOTES": 3095,
+      "Perc": 3.678218292451,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 44,
+      "VOTES": 1799,
+      "Perc": 3.122504946714,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 45,
+      "VOTES": 1603,
+      "Perc": 2.671176950892,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 46,
+      "VOTES": 3009,
+      "Perc": 3.016329681125,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 47,
+      "VOTES": 1064,
+      "Perc": 2.009101380313,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 48,
+      "VOTES": 1311,
+      "Perc": 2.254514187446,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 49,
+      "VOTES": 880,
+      "Perc": 2.89150292436,
+      "Edres": 0,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 50,
+      "VOTES": 687,
+      "Perc": 2.809586127924,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 51,
+      "VOTES": 2953,
+      "Perc": 4.099396126882,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 52,
+      "VOTES": 2917,
+      "Perc": 3.008146849541,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 53,
+      "VOTES": 4110,
+      "Perc": 4.851618386571,
+      "Edres": 0,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 54,
+      "VOTES": 1605,
+      "Perc": 3.44731302891,
+      "Edres": 0,
+      "Rank": 4,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 55,
+      "VOTES": 6902,
+      "Perc": 4.034534964605,
+      "Edres": 1,
+      "Rank": 4,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 56,
+      "VOTES": 1283,
+      "Perc": 3.084727832275,
+      "Edres": 0,
+      "Rank": 4,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 60,
+      "VOTES": 13825,
+      "Perc": 4.151352455078,
+      "Edres": 1,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 61,
+      "VOTES": 9445,
+      "Perc": 4.275574226141,
+      "Edres": 1,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 62,
+      "VOTES": 16252,
+      "Perc": 4.437381911907,
+      "Edres": 1,
+      "Rank": 5,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 63,
+      "VOTES": 9029,
+      "Perc": 3.871551450599,
+      "Edres": 1,
+      "Rank": 6,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    },
+    {
+      "EP_ID": 64,
+      "VOTES": 2441,
+      "Perc": 3.202361429977,
+      "Edres": 0,
+      "Rank": 7,
+      "PVOTES": null,
+      "PPerc": null,
+      "PEdres": null
+    }
+  ]
+}
